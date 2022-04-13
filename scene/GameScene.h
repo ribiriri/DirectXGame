@@ -43,12 +43,37 @@ class GameScene {
 	void Draw();
 
   private: // メンバ変数
-	DirectXCommon* dxCommon_ = nullptr;
-	Input* input_ = nullptr;
-	Audio* audio_ = nullptr;
-	DebugText* debugText_ = nullptr;
+	DirectXCommon* dxCommon = nullptr;
+	Input* input = nullptr;
+	Audio* audio = nullptr;
+	DebugText* debugText = nullptr;
 
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
+	/// 
+	//テクスチャ
+	uint32_t textureHandle = 0;
+
+	//スプライト
+	Sprite* sprite = nullptr;
+
+	//3Dモデル
+	Model* model = nullptr;
+
+
+	//ワールドトランスフォーム
+	WorldTransform worldTransform;
+	//ビュープロジェクション
+	ViewProjection viewProjection;
+
+	//サウンドデータハンドル
+	uint32_t soundDataHandle = 0;
+
+	//音声再生ハンドル
+	uint32_t voiceHandle = 0;
+
+	//値を表示したい変数
+	int32_t value = 0;
+
 };
